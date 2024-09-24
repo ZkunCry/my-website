@@ -15,6 +15,7 @@ export default {
         "white-text": "#F5FCFF",
         "section-card": "#2B2B39",
         "hover-link": "#27272A",
+        "about-me-white": "#FAFAFE",
       },
       boxShadow: {
         header: "0px 10px 50px rgba(0, 0, 0, 0.2)",

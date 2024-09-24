@@ -1,4 +1,5 @@
 import React from "react";
+import "./Header.css";
 interface HeaderProps extends React.HTMLProps<HTMLDivElement> {
   className?: string; // если вы хотите явно указать className
 }
