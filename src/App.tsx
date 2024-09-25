@@ -2,11 +2,13 @@ import Button from "./components/Button/Buttons";
 import Container from "./components/Container/Container";
 import Header from "./components/Header/Header";
 import HeroImg from "./assets/heroimage.jpg";
+
 import { ReactComponent as ReactIcon } from "./assets/react.svg";
 import { ReactComponent as Redux } from "./assets/Redux.svg";
 import { ReactComponent as Nextjs } from "./assets/Nextjs.svg";
 import { ReactComponent as Tailwind } from "./assets/Tailwind.svg";
 import TypingText from "./components/TypingText/TypingText";
+import CarouselSlider from "./components/CarouselSlider/CarouselSlider";
 
 function App() {
   return (
@@ -49,7 +51,7 @@ function App() {
           </div>
         </Container>
       </Header>
-      <div className="flex-1 flex flex-col w-full pt-[100px] ">
+      <div className="flex-1 flex flex-col w-full pt-[00px] ">
         <section className="w-full flex  lg:py-[8.3rem] py-[2rem]  text-black ">
           <Container>
             <div className="flex lg:flex-row flex-col items-center gap-y-6 gap-x-6 justify-between">
@@ -166,7 +168,10 @@ function App() {
           </Container>
         </section>
       </div>
-      <div> fsdfds</div>
+      <div className="bg-white flex items-center justify-center">
+        {" "}
+        <CarouselSlider />
+      </div>
     </div>
   );
 }
