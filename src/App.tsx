@@ -3,6 +3,10 @@ import Container from "./components/Container/Container";
 import Header from "./components/Header/Header";
 import HeroImg from "./assets/heroimage.jpg";
 
+import Portfolio1 from "./assets/portfolio1.jpg";
+import Portfolio2 from "./assets/portfolio2.jpg";
+import Portfolio3 from "./assets/portfolio3.jpg";
+
 import { ReactComponent as ReactIcon } from "./assets/react.svg";
 import { ReactComponent as Redux } from "./assets/Redux.svg";
 import { ReactComponent as Nextjs } from "./assets/Nextjs.svg";
@@ -167,10 +171,45 @@ function App() {
             </div>
           </Container>
         </section>
+        <section className="w-full flex  lg:py-[8.3rem] py-[2rem] bg-section-stack  text-black ">
+          <Container>
+            <div className="flex  justify-center gap-2  flex-col">
+              <div className="title">
+                <h1 className="text-[4.38rem] font-black text-white-text">
+                  My portfolio
+                </h1>
+              </div>
+              <CarouselSlider height="500px" widthCard="500" heightCard="500">
+                <CarouselSlider.Slide
+                  img={Portfolio1}
+                  title="Assistent student"
+                  description="
+                A website for students, teachers and university staff."
+                  refStr="https://github.com/Tosking/SURGAPP-frontend"
+                />
+                <CarouselSlider.Slide
+                  img={Portfolio2}
+                  title="Laptake"
+                  description="
+            Website about selling and renting laptops
+          "
+                  refStr="https://github.com/Tosking/laptake"
+                />
+                <CarouselSlider.Slide
+                  img={Portfolio3}
+                  title="React admin panel"
+                  description="
+             Admin panel created using react and redux for the surguapp web
+                application."
+                  refStr="https://github.com/ZkunCry/react-admin-panel"
+                />
+              </CarouselSlider>
+            </div>
+          </Container>
+        </section>
       </div>
-      <div className="bg-white flex items-center justify-center">
-        {" "}
-        <CarouselSlider />
+      <div className="bg-section-stack flex items-center justify-center">
+        fsd
       </div>
     </div>
   );
