@@ -16,6 +16,8 @@ export default {
         "section-card": "#2B2B39",
         "hover-link": "#27272A",
         "about-me-white": "#FAFAFE",
+        "card-desc": "#1C1E53",
+        "card-link": "#2042B9",
       },
       boxShadow: {
         header: "0px 10px 50px rgba(0, 0, 0, 0.2)",

@@ -179,7 +179,7 @@ function App() {
                   My portfolio
                 </h1>
               </div>
-              <CarouselSlider height="500px" widthCard="500" heightCard="500">
+              <CarouselSlider height="600px" widthCard="500" heightCard="500">
                 <CarouselSlider.Slide
                   img={Portfolio1}
                   title="Assistent student"

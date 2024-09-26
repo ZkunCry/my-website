@@ -44,7 +44,6 @@ const CarouselSlider = ({
         style={{
           width: width,
           minHeight: height,
-          maxHeight: height,
         }}
         className={`  h-1  overflow-hidden flex relative rounded-lg ${className}`}
       >
