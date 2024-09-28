@@ -44,6 +44,7 @@ const CarouselSlider = ({
         style={{
           width: width,
           minHeight: height,
+          overflow: "visible",
         }}
         className={`  h-1  overflow-hidden flex relative rounded-lg ${className}`}
       >
@@ -51,11 +52,11 @@ const CarouselSlider = ({
           size={40}
           color={"black"}
           onClick={() => onScroll("left")}
-          className="absolute cursor-pointer hover:bg-[#d1d5db] bg-slate-100 rounded-lg p-2 top-[50%] translate-y-[-50%] left-0 opacity-[0.8]"
+          className="absolute cursor-pointer hover:bg-[#d1d5db] bg-slate-100 rounded-lg p-2 top-[50%] translate-y-[-50%] left-0 opacity-[0.8] z-[20]"
         />
         <div
           ref={ref}
-          className="card-container  flex w-full h-full overflow-x-scroll scroll-smooth items-center gap-x-4"
+          className="card-container  flex w-full h-full py-[10px] overflow-x-scroll scroll-smooth items-center gap-x-9"
         >
           {children}
         </div>
@@ -63,7 +64,7 @@ const CarouselSlider = ({
           size={40}
           color="black"
           onClick={() => onScroll("right")}
-          className="absolute cursor-pointer bg-slate-100 hover:bg-[#d1d5db] rounded-lg p-2 top-[50%] translate-y-[-50%] right-0 opacity-[0.8]"
+          className="absolute cursor-pointer bg-slate-100 hover:bg-[#d1d5db] rounded-lg p-2 top-[50%] translate-y-[-50%] right-0 opacity-[0.8] z-[20]"
         />
       </div>
     </CarouselSlideContext.Provider>

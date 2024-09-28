@@ -11,8 +11,16 @@ import { ReactComponent as ReactIcon } from "./assets/react.svg";
 import { ReactComponent as Redux } from "./assets/Redux.svg";
 import { ReactComponent as Nextjs } from "./assets/Nextjs.svg";
 import { ReactComponent as Tailwind } from "./assets/Tailwind.svg";
-import TypingText from "./components/TypingText/TypingText";
+import { ReactComponent as HTML } from "./assets/HTML.svg";
+import { ReactComponent as CSS } from "./assets/CSS.svg";
+import { ReactComponent as Shadcn } from "./assets/Shadcn.svg";
+import { ReactComponent as MaterialUI } from "./assets/MaterialUI.svg";
+import { ReactComponent as Typescript } from "./assets/Typescript.svg";
+import { ReactComponent as ReactQuery } from "./assets/reactquery.svg";
+
 import CarouselSlider from "./components/CarouselSlider/CarouselSlider";
+import { Link } from "react-router-dom";
+import Burger from "./components/Burder/Burger";
 
 function App() {
   return (
@@ -23,60 +31,59 @@ function App() {
             <h1 className="logo text-[2.085rem] text-header-logo font-black">
               Eugene
             </h1>
-            <ul className="flex items-center  text-[1.25rem] gap-x-[2.5rem] text-header-text font-bold">
+            <ul className="md:flex hidden  items-baseline  text-[1.25rem] md:gap-0 lg:gap-x-[2.5rem] text-header-text font-bold">
               <li>
-                <a
+                <Link
                   className="hover:bg-hover-link hover:text-white-text px-3 py-2 rounded-lg "
-                  href=""
+                  to={"/"}
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="hover:bg-hover-link hover:text-white-text px-3 py-2 rounded-lg "
-                  href=""
+                  to={""}
                 >
                   Portfolio
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="hover:bg-hover-link hover:text-white-text px-3 py-2 rounded-lg "
-                  href=""
+                  to={""}
                 >
                   About me
-                </a>
+                </Link>
               </li>
               <li>
                 <Button variant="primary">Contact me</Button>
               </li>
             </ul>
+            <Burger />
           </div>
         </Container>
       </Header>
-      <div className="flex-1 flex flex-col w-full pt-[00px] ">
+      <div className="flex-1 flex flex-col  w-full pt-[100px] ">
         <section className="w-full flex  lg:py-[8.3rem] py-[2rem]  text-black ">
           <Container>
             <div className="flex lg:flex-row flex-col items-center gap-y-6 gap-x-6 justify-between">
               <div className="col flex flex-col items-start gap-y-[5rem] ">
                 <p>
-                  <span className="text-[1.57rem] font-medium">
+                  <span className="text-[calc(12px,5vw,1.57rem)] font-medium">
                     Hey, i'm Eugene
                   </span>
                   {/* <TypingText> */}
-                  <h1 className="text-[4.4rem] font-black">
+                  <h1 className="text-[clamp(30px,5vw,4.4rem)] font-black hyphens-auto">
                     I'm a <span className="text-section-text">front-end</span>{" "}
                     developer
                   </h1>
-                  {/* </TypingText> */}
-
-                  <span className="text-[1.875rem]">
+                  <span className="text-[clamp(12px,5vw,1.875rem)]">
                     Created simple sites and design
                   </span>
                 </p>
                 <Button
-                  className="bg-section-button hover:bg-section-button-hover text-[2.5rem] leading-[4.25rem] font-semibold"
+                  className="bg-section-button hover:bg-section-button-hover text-[clamp(16px,5vw,2.5rem)] py-[0.5rem] font-semibold"
                   variant="primary"
                 >
                   Contact me
@@ -91,56 +98,88 @@ function App() {
 
         <section className="w-full flex  lg:py-[8.3rem] py-[2rem] bg-section-stack  text-black ">
           <Container>
-            <div className="flex flex-col items-center justify-between">
-              <div className="top w-full">
-                <h1 className="text-[4.38rem] font-black text-white-text text-center">
-                  My stack technologies
+            <div className="flex flex-col items-center">
+              <div className="top ">
+                <h1 className="text-[clamp(30px,5vw,4.38rem)] font-black text-white-text text-center">
+                  Setuping tech stack
                 </h1>
               </div>
-              <div className="flex lg:flex-row  flex-col gap-x-[50px] gap-y-[50px] py-[68px]">
-                <div className="card flex flex-1 transition-transform p-4 hover:-translate-y-3 translate-y-0 hover:duration-200 duration-200 ease-out  flex-col items-center bg-section-card rounded-[10px]">
-                  <ReactIcon className="w-[128px]" />
-                  <span className="lg:text-[2.5rem]  text-[1.5rem] text-white-text font-black">
-                    React
-                  </span>
-                  <div className="content py-[25px]">
-                    <h1 className="text-[clamp(16px,2vw,40px)]  text-center text-white-text font-semibold">
-                      The library for web and native user interfaces
-                    </h1>
+              <div className="flex w-full flex-col lg:flex-row  justify-between gap-[40px]">
+                <div className="col flex flex-col">
+                  <h1 className="text-[clamp(16px,5vw,2rem)] text-white-text">
+                    HTML/CSS
+                  </h1>
+
+                  <div className="flex  flex-wrap justify-start w-full gap-x-[40px]  gap-y-[50px] py-[68px]">
+                    <div className="card  flex-1 md:flex-[0] flex transition-transform p-4 hover:-translate-y-3 translate-y-0 hover:duration-200 duration-200 ease-out  flex-col items-center bg-section-card rounded-[10px]">
+                      <HTML className="w-[128px]" />
+                      <span className="text-[1.5rem] text-white-text font-black">
+                        HTML
+                      </span>
+                    </div>
+                    <div className="card  flex-1 md:flex-[0] transition-transform p-4 hover:-translate-y-3 translate-y-0 hover:duration-200 duration-200 ease-out flex  flex-col items-center bg-section-card rounded-[10px]">
+                      <Tailwind className="w-[128px]" />
+                      <span className="text-[1.5rem] text-white-text font-black">
+                        TailwindCSS
+                      </span>
+                    </div>
+                    <div className="card   flex-1 md:flex-[0] transition-transform p-4 hover:-translate-y-3 translate-y-0 hover:duration-200 duration-200 ease-out flex  flex-col items-center bg-section-card rounded-[10px]">
+                      <CSS className="w-[128px] h-full" />
+                      <span className="text-[1.5rem] text-white-text font-black">
+                        CSS
+                      </span>
+                    </div>
+                    <div className="card   flex-1 md:flex-[0] transition-transform p-4 hover:-translate-y-3 translate-y-0 hover:duration-200 duration-200 ease-out flex flex-col items-center bg-section-card rounded-[10px]">
+                      <Shadcn className="w-[128px]" />
+                      <span className="text-[1.5rem] text-white-text font-black">
+                        Shadcn
+                      </span>
+                    </div>
+                    <div className="card   flex-1 md:flex-[0] transition-transform p-4 hover:-translate-y-3 translate-y-0 hover:duration-200 duration-200 ease-out flex flex-col items-center bg-section-card rounded-[10px]">
+                      <MaterialUI className="w-[128px] h-[128px]" />
+                      <span className="text-[1.5rem] text-white-text font-black">
+                        MaterialUI
+                      </span>
+                    </div>
                   </div>
                 </div>
-                <div className="card transition-transform p-4 hover:-translate-y-3 translate-y-0 hover:duration-200 duration-200 ease-out flex flex-1 flex-col items-center bg-section-card rounded-[10px]">
-                  <Tailwind className="w-[128px]" />
-                  <span className="lg:text-[2.5rem] text-[1.5rem] text-white-text font-black">
-                    TailwindCSS
-                  </span>
-                  <div className="content py-[25px]">
-                    <h1 className="text-[clamp(16px,2vw,40px)]  text-center text-white-text font-semibold">
-                      Rapidly build modern websites without ever leaving your
-                      HTML
-                    </h1>
-                  </div>
-                </div>
-                <div className="card transition-transform p-4 hover:-translate-y-3 translate-y-0 hover:duration-200 duration-200 ease-out flex flex-1 flex-col items-center bg-section-card rounded-[10px]">
-                  <Redux className="w-[128px]" />
-                  <span className="lg:text-[2.5rem] text-[1.5rem] text-white-text font-black">
-                    Redux
-                  </span>
-                  <div className="content py-[25px]">
-                    <h1 className="text-[clamp(16px,2vw,40px)] text-center text-white-text font-semibold">
-                      The simplify library for state management in app
-                    </h1>
-                  </div>
-                </div>
-                <div className="card  transition-transform p-4 hover:-translate-y-3 translate-y-0 hover:duration-200 duration-200 ease-out flex flex-1 flex-col items-center bg-section-card rounded-[10px]">
-                  <Nextjs className="w-[128px]" />
-                  <span className="lg:text-[2.5rem]  text-[1.5rem] text-white-text font-black">
-                    NextJS
-                  </span>
-                  <div className="content py-[25px]">
-                    <h1 className="text-[clamp(16px,2vw,40px)] text-center text-white-text font-semibold">
-                      Front-End and Back-End framework
-                    </h1>
+                <div className="col flex flex-col">
+                  <h1 className="text-[clamp(16px,5vw,2rem)] text-white-text">
+                    JavaScript
+                  </h1>
+
+                  <div className="flex  flex-wrap  justify-start  w-full gap-x-[40px]  gap-y-[50px] py-[68px]">
+                    <div className="card  flex-1 md:flex-[0] flex transition-transform p-4 hover:-translate-y-3 translate-y-0 hover:duration-200 duration-200 ease-out  flex-col items-center bg-section-card rounded-[10px]">
+                      <ReactIcon className="w-[128px]" />
+                      <span className="text-[1.5rem] text-white-text font-black">
+                        React
+                      </span>
+                    </div>
+
+                    <div className="card  flex-1 md:flex-[0] transition-transform p-4 hover:-translate-y-3 translate-y-0 hover:duration-200 duration-200 ease-out flex  flex-col items-center bg-section-card rounded-[10px]">
+                      <Redux className="w-[128px]" />
+                      <span className="text-[1.5rem] text-white-text font-black ">
+                        Redux
+                      </span>
+                    </div>
+                    <div className="card   flex-1 md:flex-[0] transition-transform p-4 hover:-translate-y-3 translate-y-0 hover:duration-200 duration-200 ease-out flex flex-col items-center bg-section-card rounded-[10px]">
+                      <Nextjs className="w-[128px]" />
+                      <span className="text-[1.5rem] text-white-text font-black">
+                        NextJS
+                      </span>
+                    </div>
+                    <div className="card flex-1 md:flex-[0] transition-transform p-4 hover:-translate-y-3 translate-y-0 hover:duration-200 duration-200 ease-out flex flex-col items-center bg-section-card rounded-[10px]">
+                      <Typescript className="w-[128px] " />
+                      <span className="text-[1.5rem] text-white-text font-black">
+                        Typescript
+                      </span>
+                    </div>
+                    <div className="card   flex-1 md:flex-[0] transition-transform p-4 hover:-translate-y-3 translate-y-0 hover:duration-200 duration-200 ease-out flex flex-col items-center bg-section-card rounded-[10px]">
+                      <ReactQuery className="w-[128px] h-full " />
+                      <span className="text-[1.5rem] text-white-text font-black">
+                        ReactQuery
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -154,7 +193,9 @@ function App() {
                 <img className="object-contain" src={HeroImg} alt="heroImg" />
               </div>
               <div className="col flex order-1 lg:order-2 flex-col flex-1 gap-[1.3rem]">
-                <h1 className="text-[4.38rem] font-bold">About me</h1>
+                <h1 className="text-[clamp(30px,5vw,4.38rem)] font-bold">
+                  About me
+                </h1>
                 <p className=" text-[clamp(16px,2vw,2.2rem)]">
                   I am a 4th year student of Surgut State University majoring in
                   software engineering.
@@ -173,10 +214,10 @@ function App() {
         </section>
         <section className="w-full flex  lg:py-[8.3rem] py-[2rem] bg-section-stack  text-black ">
           <Container>
-            <div className="flex  justify-center gap-2  flex-col">
+            <div className="flex  justify-center gap-y-[50px]  flex-col">
               <div className="title">
-                <h1 className="text-[4.38rem] font-black text-white-text">
-                  My portfolio
+                <h1 className="text-[clamp(30px,5vw,4.38rem)] font-black text-white-text">
+                  Portfolio
                 </h1>
               </div>
               <CarouselSlider height="600px" widthCard="500" heightCard="500">
