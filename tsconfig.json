@@ -1,8 +1,0 @@
-{
-  "files": [],
-  "include": ["custom.d.ts"],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
-}
