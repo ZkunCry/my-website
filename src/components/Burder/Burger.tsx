@@ -23,7 +23,7 @@ const Burger: React.FC = () => {
     };
   }, []);
   return (
-    <div className="relative ">
+    <div className="relative contents ">
       <button
         onClick={toggleMenu}
         className="md:hidden flex items-center justify-center z-10 w-10 h-10 bg-[#5E3BEE] text-white rounded-md focus:outline-none"

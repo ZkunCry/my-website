@@ -28,9 +28,12 @@ function App() {
       <Header className="w-full z-10  bg-header fixed  shadow-lg">
         <Container>
           <div className="flex justify-between items-center py-[31px]">
-            <h1 className="logo text-[2.085rem] text-header-logo font-black">
+            <Link
+              to={"/"}
+              className="logo text-[2.085rem] text-header-logo font-black"
+            >
               Eugene
-            </h1>
+            </Link>
             <ul className="md:flex hidden  items-baseline  text-[1.25rem] md:gap-0 lg:gap-x-[2.5rem] text-header-text font-bold">
               <li>
                 <Link
@@ -65,10 +68,10 @@ function App() {
         </Container>
       </Header>
       <div className="flex-1 flex flex-col  w-full pt-[100px] ">
-        <section className="w-full flex  lg:py-[8.3rem] py-[2rem]  text-black ">
+        <section className="w-full flex  lg:py-[8.3rem] py-[2rem] min-h-screen  text-black ">
           <Container>
             <div className="flex lg:flex-row flex-col items-center gap-y-6 gap-x-6 justify-between">
-              <div className="col flex flex-col items-start gap-y-[5rem] ">
+              <div className="col flex flex-col items-start gap-y-[5rem] w-full  justify-center ">
                 <p>
                   <span className="text-[calc(12px,5vw,1.57rem)] font-medium">
                     Hey, i'm Eugene
@@ -89,14 +92,14 @@ function App() {
                   Contact me
                 </Button>
               </div>
-              <div className="col flex">
+              <div className="col flex max-w-[80%]">
                 <img className=" object-contain" src={HeroImg} alt="heroImg" />
               </div>
             </div>
           </Container>
         </section>
 
-        <section className="w-full flex  lg:py-[8.3rem] py-[2rem] bg-section-stack  text-black ">
+        <section className="w-full flex min-h-screen lg:py-[8.3rem] py-[2rem] bg-section-stack  text-black ">
           <Container>
             <div className="flex flex-col items-center">
               <div className="top ">
@@ -186,7 +189,7 @@ function App() {
             </div>
           </Container>
         </section>
-        <section className="w-full flex  lg:py-[8.3rem] py-[2rem] bg-about-me-white  text-black ">
+        <section className="w-full flex min-h-screen lg:py-[8.3rem] py-[2rem] bg-about-me-white  text-black ">
           <Container>
             <div className="flex items-center  justify-between gap-[5rem] flex-col lg:flex-row">
               <div className="col order-2 lg:order-1 flex flex-1">
@@ -212,7 +215,7 @@ function App() {
             </div>
           </Container>
         </section>
-        <section className="w-full flex  lg:py-[8.3rem] py-[2rem] bg-section-stack  text-black ">
+        <section className="w-full flex min-h-screen  lg:py-[8.3rem] py-[2rem] bg-section-stack  text-black ">
           <Container>
             <div className="flex  justify-center gap-y-[50px]  flex-col">
               <div className="title">
