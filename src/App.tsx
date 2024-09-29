@@ -27,7 +27,7 @@ function App() {
     <div className="w-full min-h-screen relative flex flex-col ">
       <Header className="w-full z-10  bg-header fixed  shadow-lg">
         <Container>
-          <div className="flex justify-between items-center py-[31px]">
+          <div className="flex justify-between items-center py-[clamp(16px,5vw,31px)]">
             <Link
               to={"/"}
               className="logo text-[2.085rem] text-header-logo font-black"
@@ -223,7 +223,11 @@ function App() {
                   Portfolio
                 </h1>
               </div>
-              <CarouselSlider height="600px" widthCard="500" heightCard="500">
+              <CarouselSlider
+                height="600px"
+                widthCard="clamp(320px,30vw,500px)"
+                heightCard="500"
+              >
                 <CarouselSlider.Slide
                   img={Portfolio1}
                   title="Assistent student"

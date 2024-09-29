@@ -5,17 +5,15 @@ import "./CarouselSlider.css";
 import { CarouselSlideContext } from "./CarouselSliderContext/Context";
 
 interface CarouselSliderProps {
-  width?: string; // Сделаем параметры опциональными
+  width?: string;
   height?: string;
   widthCard: string;
-  className?: string; // Сделаем параметры опциональными
+  className?: string;
   heightCard: string;
   children: React.ReactNode;
 }
 
 const CarouselSlider = ({
-  width = "100%",
-  height = "100%",
   widthCard,
   heightCard,
   children,
@@ -41,18 +39,13 @@ const CarouselSlider = ({
       value={{ widthCard, heightCard }} // Упрощаем синтаксис
     >
       <div
-        style={{
-          width: width,
-          minHeight: height,
-          overflow: "visible",
-        }}
-        className={`  h-1  overflow-hidden flex relative rounded-lg ${className}`}
+        className={`w-full h-full overflow-hidden flex relative rounded-lg ${className}`}
       >
         <ChevronLeft
           size={40}
           color={"black"}
           onClick={() => onScroll("left")}
-          className="absolute cursor-pointer hover:bg-[#d1d5db] bg-slate-100 rounded-lg p-2 top-[50%] translate-y-[-50%] left-0 opacity-[0.8] z-[20]"
+          className="absolute  cursor-pointer hover:bg-[#d1d5db] bg-slate-100 rounded-lg p-2 top-[50%] translate-y-[-50%] left-0 opacity-[0.8] z-[10]"
         />
         <div
           ref={ref}

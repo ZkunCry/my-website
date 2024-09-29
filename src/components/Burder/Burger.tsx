@@ -34,7 +34,7 @@ const Burger: React.FC = () => {
       <div
         onClick={() => setIsOpen(false)}
         className={`fixed invisible inset-0 bg-black bg-opacity-50 transition-[opacity,visibility] duration-300 ease-in-out ${
-          isOpen ? "opacity-100 z-10 !visible" : "opacity-0 z-0 "
+          isOpen ? "opacity-100 z-[30] !visible" : "opacity-0 z-0 "
         }`}
       />
 
