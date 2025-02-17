@@ -1,0 +1,6 @@
+.card-container {
+  scrollbar-width: none;
+}
+.card-container::-webkit-scrollbar {
+  display: none;
+}
