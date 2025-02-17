@@ -5,7 +5,6 @@ header {
   background-color: #333;
   color: white;
   text-align: center;
-
   animation: slideDown 0.5s forwards; /* Запуск анимации */
 }
 @keyframes slideDown {

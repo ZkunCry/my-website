@@ -5,11 +5,13 @@ const Burger: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const toggleMenu = () => {
+    document.body.style.overflow = isOpen ? "auto" : "hidden";
     setIsOpen(!isOpen);
   };
   console.log(isOpen);
   const handleResize = () => {
     if (window.innerWidth > 768) {
+      document.body.style.overflow = "auto";
       setTimeout(() => {
         setIsOpen(false);
       }, 1000);
@@ -23,7 +25,7 @@ const Burger: React.FC = () => {
     };
   }, []);
   return (
-    <div className="relative contents ">
+    <div className="relative contents">
       <button
         onClick={toggleMenu}
         className="md:hidden flex items-center justify-center z-10 w-10 h-10 bg-[#5E3BEE] text-white rounded-md focus:outline-none"
@@ -32,7 +34,10 @@ const Burger: React.FC = () => {
       </button>
 
       <div
-        onClick={() => setIsOpen(false)}
+        onClick={() => {
+          document.body.style.overflow = "auto";
+          setIsOpen(false);
+        }}
         className={`fixed invisible inset-0 bg-black bg-opacity-50 transition-[opacity,visibility] duration-300 ease-in-out ${
           isOpen ? "opacity-100 z-[30] !visible" : "opacity-0 z-0 "
         }`}
